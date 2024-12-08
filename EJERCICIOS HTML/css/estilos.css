@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #f70808;
+}
+
+h2 {
+    color: #2980b9;
+}
+
+ul {
+    list-style-type: square; 
+}
+
+li:nth-child(even) {
+    color: #00eaff; 
+}
+
+img {
+    border-radius: 100px; 
+}

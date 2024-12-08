@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>Formulario de registro</title>
+    <style>
+       
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            padding: 8px;
+            width: 100%;
+        }
+        button:disabled {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario Personal</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+            <option value="nada">--Seleccionar--</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+
+        <label for="nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="nacimiento" name="nacimiento">
+
+        <label for="ocupacion">Titulos:</label>
+        <input type="text" id="ocupacion" name="ocupacion">
+
+        <label for="comentarios">Algo que quieras comentarnos:</label>
+        <input type="text" id="comentarios" name="comentarios" required>
+
+        
+        <p>Podemos enviarte publicidad y almacenar tus datos personaes?</p>
+        
+        <label>
+            <input type="checkbox" id="cookies" name="cookies"> Aceptar cookies
+        </label>
+
+        <button type="submit" id="enviarBtn" disabled>Enviar</button>
+    </form>
+
+    <script>
+        var cookieCheckbox = document.getElementById('cookies');
+        var enviarBtn = document.getElementById('enviarBtn');
+        
+        cookieCheckbox.addEventListener('change', function() {
+            if (cookieCheckbox.checked) {
+                enviarBtn.disabled = false;
+            } else {
+                enviarBtn.disabled = true;
+            }
+        });
+    </script>
+
+</body>
+</html>
